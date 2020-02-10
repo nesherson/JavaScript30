@@ -19,7 +19,14 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   margin: 1rem;
   padding: 1rem 0.5rem;
-  width: 10rem;
+  width: 5rem;
+  transition: all 0.07s;
+}
+
+.playing {
+  transform: scale(1.35);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
 }
 
 .letter {
