@@ -27,14 +27,6 @@ body {
   margin: 50px;
 }
 
-.img-wrapper {
-  margin: 25px;
-  background-color: var(--base);
-  width: 820px;
-  height: 520px;
-  margin: 0 auto;
-}
-
 .image {
   padding: var(--spacing);
   background: var(--base);
