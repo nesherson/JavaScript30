@@ -6,6 +6,42 @@
     <title>CSS Variables</title>
   </head>
   <body>
+    <div class="main">
+      <h1 class="header">Update CSS Variables with JS</h1>
+      <div class="controls">
+        <label for="js-spacing">Spacing:</label>
+        <input
+          id="js-spacing"
+          type="range"
+          name="spacing"
+          min="10"
+          max="200"
+          value="10"
+          data-sizing="px"
+        />
+
+        <label for="js-blur">Blur:</label>
+        <input
+          id="js-blur"
+          type="range"
+          name="blur"
+          min="0"
+          max="25"
+          value="10"
+          data-sizing="px"
+        />
+
+        <label for="js-color">Base Color:</label>
+        <input id="js-color" type="color" name="base" value="#ffc600" />
+      </div>
+      <div id="js-background-color" class="img-wrapper">
+        <img
+          class="image"
+          src="https://source.unsplash.com/7bwQXzbF6KE/800x500"
+          alt="woman hiking"
+        />
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
