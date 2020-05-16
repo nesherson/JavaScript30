@@ -8,3 +8,42 @@ const cities = [];
 fetch(endpoint)
   .then((resp) => resp.json())
   .then((data) => cities.push(...data));
+
+function findMatches(wordToMatch, cities) {
+  return cities.filter((place) => {
+    const regex = new RegExp(wordToMatch, 'gi');
+
+    return place.city.match(regex) || place.city.match(regex);
+  });
+}
+
+function display() {
+  const matchArr = findMatches(this.value, cities);
+  const list = document.querySelector('#js-suggestions');
+
+  const html = matchArr
+    .map((place) => {
+      const regex = new RegExp(this.value, 'gi');
+      const cityName = place.city.replace(
+        regex,
+        `<span class="hl">${this.value}</span>`
+      );
+      const stateName = place.state.replace(
+        regex,
+        `<span class="hl">${this.value}</span>`
+      );
+      return `
+      <li>
+        <span class="name">${cityName}, ${stateName}</span>
+        <span class="population">${place.population}</span>
+      </li>
+    `;
+    })
+    .join('');
+  console.log(html);
+  list.innerHTML = html;
+}
+
+const searchInput = document.querySelector('#js-search');
+
+searchInput.addEventListener('keyup', display);

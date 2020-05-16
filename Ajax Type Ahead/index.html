@@ -6,7 +6,19 @@
     <title>Ajax Type Ahead</title>
   </head>
   <body>
-    <div id="root"></div>
+    <form class="search-form">
+      <input
+        id="js-search"
+        type="text"
+        class="search"
+        placeholder="City or State"
+      />
+      <ul id="js-suggestions" class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
+
     <script src="./script.js"></script>
   </body>
 </html>
