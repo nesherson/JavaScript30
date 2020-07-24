@@ -1,0 +1,31 @@
+body {
+  background-color: #ffc600;
+  display: flex;
+  justify-content: center;
+}
+
+.inbox {
+  margin-top: 50px;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1.25rem;
+  box-shadow: 10px 9px 2px -3px rgba(0, 0, 0, 0.2);
+}
+
+.item {
+  display: flex;
+  max-width: 425px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.item p {
+  padding: 23px;
+  margin: 0;
+  border-left: 1px solid #b3f0ff;
+}
+
+.item input {
+  margin: 23px;
+}
